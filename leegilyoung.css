@@ -104,6 +104,7 @@ table.yoojonghyuk-info {
     -webkit-overflow-scrolling: touch;
     margin: 0 -10px 20px; 
     padding: 20px 0;
+    margin-top: 50px;
 }
 
 #image-gallery img {
@@ -111,8 +112,8 @@ table.yoojonghyuk-info {
     cursor: pointer;
     transition: transform 0.5s ease;
     margin: 0 10px;
-    max-width: 100%;
-    height: auto;
+    width: 700px;
+    height: 700px;
 }
 
 #image-gallery img:hover {
@@ -132,3 +133,5 @@ table.yoojonghyuk-info {
         width: 60%;
     }
 }
+
+    
