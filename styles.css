@@ -242,8 +242,9 @@ h2.title {
 }
 
 .character img {
-  max-width: 100%; 
-  height: auto; 
+  width: 300px; 
+  height: 450px; 
+  object-fit: cover; 
   border-radius: 5px;
 }
 
@@ -309,6 +310,13 @@ h2.title {
   color: black;
 }
 
+/* Media Query for Responsive Design */
+@media only screen and (min-width: 768px) {
+  .character {
+    max-width: calc(33.33% - 40px); /* Adjust based on the number of characters per row */
+  }
+}
+
 /*---------------------*/
 
 /* Footer styling */
@@ -372,10 +380,7 @@ body {
 }
 
 /* Video ORV */
-video-section {
-  justify-content:  center;
-}
-
+/* Video Section */
 #video-section {
   display: flex;
   flex-direction: column;
@@ -392,12 +397,56 @@ video-section {
   margin-top: 20px;
   font-size: 150%;
 }
-.video-container {
-  margin-top: 20px; 
-  border-color: goldenrod;
+
+.video-carousel {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overflow: hidden;
 }
 
+.video-container {
+  flex: 0 0 auto;
+  margin: 0 10px;
+  scroll-snap-align: start;
+  width: 100%;
+  height: 45vh;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
 
 .video-container iframe {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container.active {
+  opacity: 1;
+}
+
+.video-title {
+  margin-top: 10px;
+  font-size: 36px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgb(184, 120, 32);
+  text-align: center;
+}
+
+#video-scroll-left, #video-scroll-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#video-scroll-left {
+  left: 10px;
+}
+
+#video-scroll-right {
+  right: 10px;
 }
