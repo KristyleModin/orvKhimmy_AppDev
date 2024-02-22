@@ -77,5 +77,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
         updateButtonStates();
     });
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const videoCarousel = document.querySelector('.video-carousel');
+        const videoTitle = document.querySelector('.video-title');
+        const leftButton = document.getElementById('video-scroll-left');
+        const rightButton = document.getElementById('video-scroll-right');
+        const scrollDistance = 580; 
+        
+        leftButton.addEventListener('click', function() {
+            videoCarousel.scrollBy(-scrollDistance, 0);
+        });
+        
+        rightButton.addEventListener('click', function() {
+            videoCarousel.scrollBy(scrollDistance, 0);
+        });
+        
+        videoCarousel.addEventListener('scroll', function() {
+            const videoContainers = document.querySelectorAll('.video-container');
+            const carouselRect = videoCarousel.getBoundingClientRect();
+            const carouselCenter = carouselRect.left + carouselRect.width / 2;
     
+            videoContainers.forEach((container, index) => {
+                const containerRect = container.getBoundingClientRect();
+                const containerCenter = containerRect.left + containerRect.width / 2;
+                const distance = Math.abs(containerCenter - carouselCenter);
+                
+                if (distance < carouselRect.width / 4) {
+                    container.classList.add('active');
+                    videoTitle.textContent = container.getAttribute('data-title');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        });
+    });
     
