@@ -16,6 +16,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about" id="aboutLink">About</a></li>
             <li><a href="#characters" id="charactersLink">Characters</a></li>
+            <li><a href="#video-section" id="Video">Video</a></li>
         </ul>
     </div>
 
@@ -107,7 +108,7 @@
         </section>
     </section>
 
-    Characters Section
+    <!-- Characters Section -->
     <section id="characters" class="tooltip">
         <h2 class="title">Characters</h2>    
 
@@ -228,12 +229,21 @@
 
     <!-- Video Section -->
     <section id="video-section">
-        <h2 class="title">Summary</h2>
-        <div class="video-container">
-            <iframe width="560" height="315" src="./ORV Video.mp4" frameborder="0" allowfullscreen></iframe>
+        <h2 class="video-title">Teaser</h2>
+        <div class="video-carousel">
+            <div class="video-container" data-title="Teaser">
+                <iframe width="560" height="315" src="./ORV Video_Teaser.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container" data-title="Summary">
+                <iframe width="560" height="315" src="./ORV Video_Summary.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container" data-title="ORV in a Nutshell">
+                <iframe width="560" height="315" src="./ORV Video_Memes.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
+        <button id="video-scroll-left">◀</button>
+        <button id="video-scroll-right">▶</button>
     </section>
-
     
     <!-- Footer Section -->
     <footer id="page-footer">
