@@ -1,4 +1,4 @@
-/* kimdokja.css */
+
 
 body,
 html {
@@ -8,7 +8,6 @@ html {
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* Navbar styling */
 #navbar {
     background-color: #161414;
     position: fixed;
@@ -40,7 +39,6 @@ html {
     background-color: #555;
 }
 
-/* Container for the layout */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -49,7 +47,7 @@ html {
     margin-top: 50px;
 }
 
-/* Left part with Kim Dokja's image */
+
 .left-part {
     width: 100%;
     max-width: 600px;
@@ -68,14 +66,14 @@ html {
     max-width: 600px;
     padding-left: 20px;
     margin-top: 20px;
-    margin-bottom: 40px; /* Increased margin between image gallery and table */
+    margin-bottom: 40px; 
 }
 
 .right-part h2 {
     color: white;
 }
 
-/* Table styling */
+
 table {
     width: 100%;
     margin-bottom: 20px;
@@ -95,13 +93,13 @@ td {
     text-align: left;
 }
 
-/* Kim Dokja's Information Table */
+
 table.kimdokja-info {
     background-color: #252222;
     box-shadow: 0 0 10px rgba(184, 120, 32, 0.5);
 }
 
-/* Add this CSS to kimdokja.css */
+
 
 #image-gallery {
     display: flex;
@@ -204,22 +202,24 @@ table.kimdokja-info {
     
     
     
-    #image-gallery {
-        display: flex;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        margin: 0 -10px 20px; 
-        padding: 20px 0;
-    }
-    
-    #image-gallery img {
-        flex: 0 0 auto;
-        cursor: pointer;
-        transition: transform 0.5s ease;
-        margin: 0 10px;
-        max-width: 100%;
-        height: auto;
-    }
+#image-gallery {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -10px 20px; 
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+#image-gallery img {
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    margin: 0 10px;
+    width: 700px;
+    height: 700px;
+}
+
     
     #image-gallery img:hover {
         transform: scale(1.1);
@@ -241,7 +241,7 @@ table.kimdokja-info {
     
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: 0 -10px 30px; /* Increased margin-bottom to add more space */
+    margin: 0 -10px 30px; 
     padding: 20px 0;
 }
 
