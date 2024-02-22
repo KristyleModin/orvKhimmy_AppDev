@@ -46,6 +46,7 @@ html {
     justify-content: center;
     align-items: flex-start;
     margin-top: 50px;
+    
 }
 
 .left-part {
@@ -96,8 +97,6 @@ table.yoojonghyuk-info {
     box-shadow: 0 0 10px rgba(184, 120, 32, 0.5);
 }
 
-
-
 #image-gallery {
     display: flex;
     overflow-x: auto;
@@ -115,7 +114,6 @@ table.yoojonghyuk-info {
     width: 700px;
     height: 700px;
 }
-
 
 #image-gallery img:hover {
     transform: scale(1.1);
