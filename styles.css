@@ -310,10 +310,10 @@ h2.title {
   color: black;
 }
 
-/* Media Query for Responsive Design */
+
 @media only screen and (min-width: 768px) {
   .character {
-    max-width: calc(33.33% - 40px); /* Adjust based on the number of characters per row */
+    max-width: calc(33.33% - 40px); 
   }
 }
 
@@ -380,7 +380,6 @@ body {
 }
 
 /* Video ORV */
-/* Video Section */
 #video-section {
   display: flex;
   flex-direction: column;
