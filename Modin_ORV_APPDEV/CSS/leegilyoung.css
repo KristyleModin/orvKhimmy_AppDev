@@ -1,0 +1,134 @@
+
+
+body,
+html {
+    background-color: #252222;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+#navbar {
+    background-color: #161414;
+    position: fixed;
+    width: 100%;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li {
+    display: inline;
+}
+
+#navbar ul li a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+#navbar ul li a:hover {
+    background-color: #555;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.left-part {
+    width: 100%;
+    max-width: 600px;
+}
+
+.left-part img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.right-part {
+    width: 100%;
+    max-width: 600px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.right-part h2 {
+    color: white;
+}
+
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid goldenrod;
+    border-collapse: collapse;
+    color: white;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+table.yoojonghyuk-info {
+    background-color: #252222;
+    box-shadow: 0 0 10px rgba(184, 120, 32, 0.5);
+}
+
+
+
+#image-gallery {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -10px 20px; 
+    padding: 20px 0;
+}
+
+#image-gallery img {
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    margin: 0 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+#image-gallery img:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .left-part {
+        width: 40%;
+    }
+
+    .right-part {
+        width: 60%;
+    }
+}
